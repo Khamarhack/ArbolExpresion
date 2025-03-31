@@ -9,42 +9,53 @@ Estructuras de datos
 
 using namespace std;
 
-NodoExpresion::NodoExpresion(){
-	this->hijoIzq=NULL;
-	this->hijoDer=NULL;
-}
-NodoExpresion::~NodoExpresion(){
-}
-
-char NodoExpresion::getDato(){
-	return this->dato;
+// Constructor: Inicializa los hijos en NULL
+NodoExpresion::NodoExpresion() {
+    this->hijoIzq = NULL;
+    this->hijoDer = NULL;
 }
 
-void NodoExpresion::setDato(char val){
-	this->dato=val;
-	return;
+// Destructor
+NodoExpresion::~NodoExpresion() {
 }
 
-NodoExpresion* NodoExpresion::getHijoIzq(){
-	return this->hijoIzq;
+// Retorna el valor del nodo
+char NodoExpresion::getDato() {
+    return this->dato;
 }
 
-NodoExpresion* NodoExpresion::getHijoDer(){
-	return this->hijoDer;
+// Asigna un valor al nodo
+void NodoExpresion::setDato(char val) {
+    this->dato = val;
 }
 
-void NodoExpresion::setHijoIzq(NodoExpresion* izq){
-	this->hijoIzq=izq;
-	return;
+// Retorna el hijo izquierdo
+NodoExpresion* NodoExpresion::getHijoIzq() {
+    return this->hijoIzq;
 }
-void NodoExpresion::setOperando(bool op){
-	this->operando=op;
-	return;
+
+// Retorna el hijo derecho
+NodoExpresion* NodoExpresion::getHijoDer() {
+    return this->hijoDer;
 }
-bool NodoExpresion::getOperando(){
-	return this->operando;
+
+// Asigna un hijo izquierdo
+void NodoExpresion::setHijoIzq(NodoExpresion* izq) {
+    this->hijoIzq = izq;
 }
-void NodoExpresion::setHijoDer(NodoExpresion* der){
-	this->hijoDer=der;
-	return;
+
+// Define si el nodo es un operando
+void NodoExpresion::setOperando(bool op) {
+    this->operando = op;
 }
+
+// Retorna si el nodo es un operando
+bool NodoExpresion::getOperando() {
+    return this->operando;
+}
+
+// Asigna un hijo derecho
+void NodoExpresion::setHijoDer(NodoExpresion* der) {
+    this->hijoDer = der;
+}
+
